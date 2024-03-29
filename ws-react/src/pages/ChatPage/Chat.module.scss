@@ -1,0 +1,127 @@
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  margin: 0 5%;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding: 0;
+
+  .room-info {
+    flex-basis: 10%;
+    flex-shrink: 0;
+
+    .online {
+      display: flex;
+      flex-direction: row;
+      padding: 0 10px;
+      gap: 20px;
+      border-radius: 25px;
+      border: 1px solid #FA7370;
+      overflow-x: auto;
+      overflow-y: hidden;
+      scrollbar-width: thin;
+      scrollbar-color: #FA7370 transparent;
+
+      // Styles for scrollbar (For Chrome, Safari and Edge)
+      &::-webkit-scrollbar {
+        height: 8px;
+      }
+      &::-webkit-scrollbar-thumb {
+        background-color: #FA7370;
+        border-radius: 4px;
+      }
+
+      .user {
+        font-family: "Rubik", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: lighter;
+        font-style: normal;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .img {
+          margin: 5px;
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center;
+          display: flex;
+          border-radius: 50%;
+
+
+          user-select: none;
+
+
+          height: 64px;
+          width: 64px;
+          max-height: 256px;
+          max-width: 256px;
+          border: 2px solid #FAC4E1;
+        }
+
+
+        p {
+          margin: 0 0 5px;
+          max-width: 100%;
+          text-align: center;
+          font-size: 10px;
+        }
+      }
+    }
+  }
+
+  .chatArea {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+
+    .textarea {
+      flex-grow: 1;
+      resize: none;
+
+
+      .message {
+        display: flex;
+        background: #F7F4F9;
+        border-radius: 10px;
+        padding: 10px;
+        margin: 5px 0;
+
+        .nickname {
+          font-weight: bold;
+          color: #495057;
+        }
+
+        .text {
+          margin-left: 10px;
+          color: #212529;
+        }
+      }
+
+    }
+
+    .toolbox {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+
+      input {
+        flex-grow: 1;
+        width: auto;
+        margin-right: 10px;
+      }
+
+      button {
+        flex-grow: 0;
+        flex-shrink: 0;
+        white-space: nowrap;
+      }
+    }
+
+  }
+}

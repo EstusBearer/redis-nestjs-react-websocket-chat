@@ -1,0 +1,41 @@
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #4617E8;
+  color: white;
+  user-select: none;
+
+  p {
+    &:hover {
+      cursor: pointer;
+      color: #e0e0e0;
+    }
+  }
+}
+
+.left, .right {
+  display: inline-flex;
+
+  p {
+    &:not(:last-child) {
+      padding-right: 25px;
+    }
+
+    &:not(:first-child) {
+      padding-left: 25px;
+    }
+  }
+}
+
+.left {
+  p:first-child {
+    padding-left: 15px;
+  }
+}
+
+.right {
+  p:last-child {
+    padding-right: 15px;
+  }
+}
